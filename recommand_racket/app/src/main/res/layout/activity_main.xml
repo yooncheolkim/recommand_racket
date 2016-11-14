@@ -19,11 +19,12 @@
         android:layout_gravity="center"
         android:text="성별"
         android:textSize="30dp"
-        android:id="@+id/gender" />
+        android:id="@+id/gender_button" />
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/gender">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -39,7 +40,8 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:weightSum="1">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,9 +50,21 @@
         android:textSize="30dp"
         android:id = "@+id/weight_button"/>
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/weight"/>
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/weight"
+        android:textSize="30dp"
+        android:inputType="number"
+        android:digits="0123456789"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="kg"
+        android:textSize="30dp"
+
+        android:id="@+id/textView"
+        android:layout_gravity="right"/>
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,9 +78,17 @@
             android:textSize="30dp"
             android:id = "@+id/height_button"/>
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/height"/>
+            android:id="@+id/height"
+            android:inputType="number"
+            android:digits="0123456789"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="cm"
+            android:textSize="30dp"
+            android:layout_gravity="right"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,7 +103,8 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/type">
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -110,9 +133,17 @@
             android:textSize="30dp"
             android:id = "@+id/price_button"/>
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/price" />
+            android:id="@+id/price"
+            android:inputType="number"
+            android:digits="0123456789"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="won"
+            android:textSize="30dp"
+            android:layout_gravity="right"/>
     </LinearLayout>
     <Button
         android:layout_width="match_parent"
