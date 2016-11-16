@@ -62,7 +62,6 @@
         android:layout_height="match_parent"
         android:text="kg"
         android:textSize="30dp"
-
         android:id="@+id/textView"
         android:layout_gravity="right"/>
 </LinearLayout>
