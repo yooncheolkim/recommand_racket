@@ -18,7 +18,7 @@ public class calPower_Activity extends AppCompatActivity {
     SensorEventListener acc;
     Sensor accSensor;
 
-    double ia_p;
+    double ia_p=0;
 
 
     TextView x;
@@ -49,7 +49,11 @@ public class calPower_Activity extends AppCompatActivity {
         accSensor = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
         acc = new accListener();
+
+
+
     }
+
     @Override
     public void onResume(){
         super.onResume();
@@ -69,11 +73,27 @@ public class calPower_Activity extends AppCompatActivity {
             y.setText(Float.toString(event.values[1]));
             z.setText(Float.toString(event.values[2]));
 
+            double temp_ia_p;
+            temp_ia_p = Math.pow(event.values[0],2) + Math.pow(event.values[1],2) + Math.pow(event.values[2],2);
 
-            ia_p = Math.pow(event.values[0],2) + Math.pow(event.values[1],2) + Math.pow(event.values[2],2);
+            if(ia_p <temp_ia_p){
+                ia_p = temp_ia_p;
+            }
 
+            ia.setText(String.valueOf(ia_p));
 
         }
         public void onAccuracyChanged(Sensor sensor, int accuracy){}
+
+
     }
+
+    class TimeControl extends Thread{
+        public void run(){
+            SensorEventListener acc_2;
+            acc_2 = new accListener();
+
+        }
+    }
+
 }
