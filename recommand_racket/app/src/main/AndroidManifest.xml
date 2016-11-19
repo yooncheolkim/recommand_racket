@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".calPower_Activity"></activity>
+        <activity android:name=".recommand_layout_Activity"></activity>
     </application>
 
 </manifest>

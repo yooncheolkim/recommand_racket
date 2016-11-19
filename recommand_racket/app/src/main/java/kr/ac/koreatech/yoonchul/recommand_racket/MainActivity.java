@@ -63,8 +63,10 @@ public class MainActivity extends AppCompatActivity {
                 String putType;
                 if(gender.getCheckedRadioButtonId() == male.getId())
                     putGender = "male";
-                else
+                else if(gender.getCheckedRadioButtonId() == female.getId())
                     putGender = "female";
+                else
+                    putGender = "";
 
                 if(type.getCheckedRadioButtonId() == allrounder.getId())
                     putType = "allrounder";
