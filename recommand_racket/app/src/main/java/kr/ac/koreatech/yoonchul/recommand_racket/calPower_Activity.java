@@ -130,8 +130,7 @@ public class calPower_Activity extends AppCompatActivity {
             if(new Date().getTime() > start + 5000) {
                 double realPower = 0;
 
-                //성별에 따라 힘을 다르게 주기
-
+                //성별과 몸무게에 따라 힘을 다르게 주기
 
                 if(gender.equals("male"))
                     realPower = maxAcc * weight*2.85/100;

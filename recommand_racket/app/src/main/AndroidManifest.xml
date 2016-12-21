@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".calPower_Activity"></activity>
         <activity android:name=".recommand_layout_Activity"></activity>
+        <activity android:name=".Information"></activity>
     </application>
 
 </manifest>
