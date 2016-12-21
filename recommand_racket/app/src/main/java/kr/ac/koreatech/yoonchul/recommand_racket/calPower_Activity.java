@@ -159,7 +159,7 @@ public class calPower_Activity extends AppCompatActivity {
             double tmpAcc = Math.pow(event.values[0],2) + Math.pow(event.values[1],2) + Math.pow(event.values[2],2);
             maxAcc = (maxAcc > tmpAcc)? maxAcc : tmpAcc;
 
-            ia.setText(Double.toString(maxAcc));
+            //ia.setText(Double.toString(maxAcc));
 
 /*
             //힘을 측정하는 알고리즘

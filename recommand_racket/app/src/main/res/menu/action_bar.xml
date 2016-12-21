@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/back_first"
+        android:icon="@drawable/ic_settings_backup_restore_black_24dp"
+        app:showAsAction= "always|withText"
+        android:title="memo_write"
+        android:focusable="false" />
+
+</menu>

@@ -143,18 +143,6 @@ public class DBHelper extends SQLiteOpenHelper{
         //db.execSQL("insert into contacts values(null,'METEOR X 8166','victor','2','heavy','Flexible','41400'.'meteor_x_8166');");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){

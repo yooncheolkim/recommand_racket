@@ -48,14 +48,16 @@
         android:layout_gravity="center"
         android:text = "몸무게"
         android:textSize="30dp"
-        android:id = "@+id/weight_button"/>
+        android:id = "@+id/weight_button" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/weight"
         android:textSize="30dp"
         android:inputType="number"
-        android:digits="0123456789"/>
+        android:digits="0123456789"
+        android:minWidth="100dp"
+        android:background = "@drawable/round"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,7 +65,8 @@
         android:text="kg"
         android:textSize="30dp"
         android:id="@+id/textView"
-        android:layout_gravity="right"/>
+        android:layout_gravity="right"
+        android:textStyle="italic" />
 </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,13 +84,16 @@
             android:layout_height="match_parent"
             android:id="@+id/height"
             android:inputType="number"
-            android:digits="0123456789"/>
+            android:digits="0123456789"
+            android:minWidth="100dp"
+            android:background = "@drawable/round" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="cm"
             android:textSize="30dp"
-            android:layout_gravity="right"/>
+            android:layout_gravity="right"
+            android:textStyle="italic"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -136,13 +142,16 @@
             android:layout_height="match_parent"
             android:id="@+id/price"
             android:inputType="number"
-            android:digits="0123456789"/>
+            android:digits="0123456789"
+            android:minWidth="200dp"
+            android:background = "@drawable/round"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="won"
             android:textSize="30dp"
-            android:layout_gravity="right"/>
+            android:layout_gravity="right"
+            android:textStyle="italic"/>
     </LinearLayout>
     <Button
         android:layout_width="match_parent"

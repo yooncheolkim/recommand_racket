@@ -24,7 +24,6 @@ public class Information extends AppCompatActivity{
     private SQLiteDatabase db;
     private Cursor c;
 
-
     ImageView IV;
     TextView E_RC_name;
     TextView E_RC_company;
@@ -44,22 +43,21 @@ public class Information extends AppCompatActivity{
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
 
-
         helper = new DBHelper(this);
         try {
             db = helper.getWritableDatabase();
         } catch (SQLiteException e) {
             db = helper.getReadableDatabase();
         }
+                IV = (ImageView)findViewById(R.id.RC_view);
+                E_RC_name = (TextView)findViewById(R.id.RC_name);
+                E_RC_company = (TextView)findViewById(R.id.RC_company);
+                E_RC_weight = (TextView)findViewById(R.id.RC_weight);
+                E_RC_balance = (TextView)findViewById(R.id.RC_balance);
+                E_RC_shaft = (TextView)findViewById(R.id.RC_shaft);
+                E_RC_price = (TextView)findViewById(R.id.RC_price);
+                B_RC_page = (Button)findViewById(R.id.RC_page);
 
-        IV = (ImageView)findViewById(R.id.RC_view);
-        E_RC_name = (TextView)findViewById(R.id.RC_name);
-        E_RC_company = (TextView)findViewById(R.id.RC_company);
-        E_RC_weight = (TextView)findViewById(R.id.RC_weight);
-        E_RC_balance = (TextView)findViewById(R.id.RC_balance);
-        E_RC_shaft = (TextView)findViewById(R.id.RC_shaft);
-        E_RC_price = (TextView)findViewById(R.id.RC_price);
-        B_RC_page = (Button)findViewById(R.id.RC_page);
 
 
         c = db.rawQuery("select * from contacts where racket_name = '"+name+"' ", null);
@@ -92,5 +90,11 @@ public class Information extends AppCompatActivity{
             }
         });
 
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        c.close();
     }
 }
