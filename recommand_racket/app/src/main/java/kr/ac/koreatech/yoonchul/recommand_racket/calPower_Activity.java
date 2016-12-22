@@ -152,9 +152,9 @@ public class calPower_Activity extends AppCompatActivity {
 
 
 
-            x.setText(Float.toString(event.values[0]));
-            y.setText(Float.toString(event.values[1]));
-            z.setText(Float.toString(event.values[2]));
+            //x.setText(Float.toString(event.values[0]));
+            //y.setText(Float.toString(event.values[1]));
+            //z.setText(Float.toString(event.values[2]));
 
             double tmpAcc = Math.pow(event.values[0],2) + Math.pow(event.values[1],2) + Math.pow(event.values[2],2);
             maxAcc = (maxAcc > tmpAcc)? maxAcc : tmpAcc;

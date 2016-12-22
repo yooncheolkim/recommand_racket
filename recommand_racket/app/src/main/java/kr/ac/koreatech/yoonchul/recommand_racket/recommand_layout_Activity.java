@@ -175,11 +175,11 @@ public class recommand_layout_Activity extends AppCompatActivity {
             Log.i(TAG, "resName = " + resName);
             Log.i(TAG, "resID = " + resID);
             Log.i(TAG, "company = " + company);
-            /*
+
             i++;
-            if(i==6)//이러는 내가 너무 밉다....
+            if(i==3)//이러는 내가 너무 밉다....
                 return;
-                */
+
             mAdapter.addItem(getResources().getDrawable(resID), name, company);
             //mAdapter.addItem(null, name, company);
         }
@@ -198,7 +198,7 @@ public class recommand_layout_Activity extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy() {
+    protected void onStop() {
         super.onDestroy();
 
         c.close();

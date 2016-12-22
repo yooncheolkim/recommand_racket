@@ -47,8 +47,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="29dp"
+            android:textSize="35dp"
             android:layout_gravity="center"
-            android:text = "스마트폰을 힘차게 돌려주세요."/>
+            android:text = "스마트폰을 5초 동안\n힘차게 돌려주세요."/>
     </LinearLayout>
 </LinearLayout>
